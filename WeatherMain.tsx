@@ -1,5 +1,5 @@
 import React from 'react';
-import {ScrollView, StyleSheet, View} from 'react-native';
+import {SafeAreaView, ScrollView, StyleSheet, View} from 'react-native';
 import ToggleableCityForm from './components/ToggleableCityForm';
 import Weather from './components/Weather';
 import {fetchWeather} from './utils/api';
@@ -214,7 +214,7 @@ export default class WeatherMain extends React.Component {
 	render() {
 		const {citys}:any = this.state;
 		return (
-			<View style={styles.container}>
+			<SafeAreaView style={styles.container}>
 				<ToggleableCityForm
 					onFormSubmit={this.addCity}
 					onRemoveCity={this.handleRemoveCity}
@@ -240,7 +240,7 @@ export default class WeatherMain extends React.Component {
 					}
 				</ScrollView>
 
-			</View>
+			</SafeAreaView>
 		);
 
 	}
